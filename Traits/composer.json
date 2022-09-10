@@ -1,0 +1,15 @@
+{
+    "name": "igoro/traits",
+    "autoload": {
+        "psr-4": {
+            "Source\\App\\": "Source/App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Igor",
+            "email": "igoroliveira.oliveira@gmail.com"
+        }
+    ],
+    "require": {}
+}

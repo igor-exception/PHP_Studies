@@ -1,0 +1,15 @@
+{
+    "name": "igoro/playground",
+    "autoload": {
+        "psr-4": {
+            "App\\": "Source/App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Igor",
+            "email": "igoroliveira.oliveira@gmail.com"
+        }
+    ],
+    "require": {}
+}
