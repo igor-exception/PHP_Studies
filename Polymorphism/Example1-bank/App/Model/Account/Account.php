@@ -1,8 +1,7 @@
 <?php
-namespace App\Account;
+namespace App\Model\Account;
 
-use App\User;
-
+use App\Model\Employee\User;
 
 abstract class Account
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Account;
+namespace App\Model\Account;
 
 class SavingAccount extends Account
 {

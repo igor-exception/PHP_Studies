@@ -1,11 +1,9 @@
 <?php
-
 require_once __DIR__. '/vendor/autoload.php';
-use App\User;
-use App\Address;
-use App\CPF;
+use \App\Model\Employee\User;
+use \App\Model\{Address, CPF};
 
-$account1 = new \App\Account\CheckingAccount(
+$account1 = new \App\Model\Account\CheckingAccount(
     new User(
         'John Doe',
         new Address(
@@ -13,11 +11,12 @@ $account1 = new \App\Account\CheckingAccount(
             '1001',
             '08030-000'
         ),
-        new CPF('123.456.789-10') 
+        new CPF('123.456.789-10'),
+        1000
     )
 );
 
-$account2 = new \App\Account\SavingAccount(
+$account2 = new \App\Model\Account\SavingAccount(
     new User(
         'Patrick Doe',
         new Address(
@@ -25,7 +24,8 @@ $account2 = new \App\Account\SavingAccount(
             '222',
             '08031-100'
         ),
-        new CPF('987.654.321-10') 
+        new CPF('987.654.321-10'),
+        2000
     )
 );
 
