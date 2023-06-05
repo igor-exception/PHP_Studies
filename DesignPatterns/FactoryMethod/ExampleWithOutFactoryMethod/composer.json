@@ -1,0 +1,14 @@
+{
+    "name": "root/example-with-out-factory-method",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "igor"
+        }
+    ],
+    "require": {}
+}
