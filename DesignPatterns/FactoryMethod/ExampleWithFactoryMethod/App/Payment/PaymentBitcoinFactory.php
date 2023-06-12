@@ -1,9 +1,9 @@
 <?php
 namespace App\Payment;
-use \App\Payment\{AbstractPayment, PaymentInterface};
+use \App\Payment\{AbstractPaymentFactory, PaymentInterface};
 use \App\Payment\Method\Bitcoin;
 
-class PaymentBitcoin extends AbstractPayment
+class PaymentBitcoinFactory extends AbstractPaymentFactory
 {
     public function createPayment(): PaymentInterface
     {

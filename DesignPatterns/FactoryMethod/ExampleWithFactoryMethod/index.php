@@ -1,31 +1,32 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-use \App\Payment\{PaymentBitcoin, PaymentCreditCard, PaymentMoney, PaymentPix};
+
+use \App\Payment\{PaymentBitcoinFactory, PaymentCreditCardFactory, PaymentMoneyFactory, PaymentPixFactory};
   if(isset($_POST['value']) && !empty($_POST['value']) && 
     isset($_POST['payment-method']) && !empty($_POST['payment-method'])) {
 
       // se dados são válidos...
       if($_POST['payment-method'] == 'money') {
-        $payment = new PaymentMoney();
+        $payment = new PaymentMoneyFactory();
       } else if($_POST['payment-method'] == 'pix') {
-        $payment = new PaymentPix();
+        $payment = new PaymentPixFactory();
       } else if($_POST['payment-method'] == 'credit-card') {
-        $payment = new PaymentCreditCard();
+        $payment = new PaymentCreditCardFactory();
       }else if($_POST['payment-method'] == 'bitcoin'){
-        $payment = new PaymentBitcoin();
+        $payment = new PaymentBitcoinFactory();
       } else {
         throw new \Exception('****Erro com metodo de pagamento****');
       }
 
       echo '<br>';
-      echo '<h1>' . 'O valor a ser pago é de: '. $payment->totalValue($_POST['value']) . '</h1>';
+      echo '<h1>' . 'O valor final a ser pago é de: '. $payment->totalValue($_POST['value']) . '</h1>';
 
   }
 
 ?>
 
 <form method="POST">
-  <label for="value">Valor a ser pago:</label><br>
+  <label for="value">Valor inicial do produto:</label><br>
   <input type="text" name="value" value="1000">
   <br/><br>
   

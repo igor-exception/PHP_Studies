@@ -3,7 +3,7 @@
 namespace App\Payment;
 use \App\Payment\PaymentInterface;
 
-abstract class AbstractPayment
+abstract class AbstractPaymentFactory
 {
     abstract public function createPayment(): PaymentInterface;
 
